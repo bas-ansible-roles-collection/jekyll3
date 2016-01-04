@@ -1,0 +1,13 @@
+---
+# Tests if jekyll can actually be used
+
+- name: determine if jekyll can be used
+  command: jekyll -v
+  changed_when: False
+  register: jekyll3_test_fact_jekyll_is_installed
+  become: no
+- name: assert jekyll can be used
+  assert:
+    that:
+      - "'jekyll 3.' in jekyll3_test_fact_jekyll_is_installed.stdout"
+  become: no

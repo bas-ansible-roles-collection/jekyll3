@@ -1,0 +1,4 @@
+---
+# Default variables - inventory or playbook overrides will be respected
+
+jekyll3_gem_version: "~>3.0"

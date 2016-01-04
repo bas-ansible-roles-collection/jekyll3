@@ -1,0 +1,8 @@
+---
+# Install Jekyll 3
+
+- name: install jekyll gem
+  gem:
+    name=jekyll
+    version="{{ jekyll3_gem_version }}"
+    state=present

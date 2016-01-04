@@ -1,0 +1,12 @@
+---
+# tasks file for jekyll3
+
+- include: install-dependencies.yml
+  tags:
+    - BARC_INSTALL
+    - BARC_INSTALL_PACKAGES
+
+- include: install.yml
+  tags:
+    - BARC_INSTALL
+    - BARC_INSTALL_PACKAGES

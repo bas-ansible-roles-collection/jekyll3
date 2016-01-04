@@ -1,0 +1,13 @@
+---
+# Tests Ruby 2 is installed correctly
+
+- name: determine if jekyll gem is installed
+  command: gem list
+  changed_when: False
+  register: jekyll3_test_fact_installed_gems
+  become: no
+- name: assert jekyll gem is installed
+  assert:
+    that:
+      - "'jekyll ' in jekyll3_test_fact_installed_gems.stdout"
+  become: no
