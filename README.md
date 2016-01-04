@@ -4,7 +4,7 @@ Master:
 
 Develop:
 
-Installs Jekyll 3
+Installs Jekyll 3 static site generator
 
 **Part of the BAS Ansible Role Collection (BARC)**
 
