@@ -3,6 +3,7 @@
 Master:
 
 Develop:
+[![Build Status](https://semaphoreci.com/api/v1/projects/56a5d199-24a3-44fb-8603-41ad94664868/649152/badge.svg)](https://semaphoreci.com/antarctica/ansible-jekyll3)
 
 Installs Jekyll 3 static site generator
 
