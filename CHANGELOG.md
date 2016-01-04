@@ -7,5 +7,7 @@ This role adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## 0.1.0 - 07/12/2015
 
+### Added
+
 * Initial version - replaces the previous BARC 'Jekyll' role (with this 'Jekyll 3' role) with support for latest Jekyll
 version

@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Felix Fennell
-  description: Installs Jekyll 3
+  description: Installs Jekyll 3 static site generator
   company: British Antarctic Survey
 
   issue_tracker_url: https://jira.ceh.ac.uk/browse/BARC

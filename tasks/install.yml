@@ -3,6 +3,8 @@
 
 - name: install jekyll gem
   gem:
-    name=jekyll
-    version="{{ jekyll3_gem_version }}"
-    state=present
+            name=jekyll
+         version="{{ jekyll3_gem_version }}"
+           state=present
+    user_install=no
+  changed_when: false
