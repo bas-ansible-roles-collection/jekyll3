@@ -7,3 +7,4 @@
          version="{{ jekyll3_gem_version }}"
            state=present
     user_install=no
+changed_when: false
