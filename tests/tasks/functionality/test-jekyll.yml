@@ -12,7 +12,7 @@
       - "'jekyll 3.' in jekyll3_test_fact_jekyll_is_installed.stdout"
 
 - name: generate a jekyll site
-  command: jekyll new site
+  command: jekyll new ~/site
     creates=~/site/_config.yml
   become: no
 
