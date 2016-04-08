@@ -1,7 +1,7 @@
 ---
-# Install Jekyll 3
+# Install Jekyll 3 Gem
 
-- name: install jekyll gem
+- name: install jekyll gem globally
   gem:
             name=jekyll
          version="{{ jekyll3_gem_version }}"

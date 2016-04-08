@@ -1,6 +1,6 @@
-# Install dependencies for Jekyll
+# Install system dependencies for installing dependencies of Jekyll Gem
 
-- name: install jekyll dependencies - CentOS
+- name: install jekyll build dependencies - CentOS
   yum:
              pkg={{ item }}
     update_cache=yes
@@ -10,7 +10,7 @@
     - gcc-c++
   when: ansible_distribution == "CentOS"
 
-- name: install jekyll dependencies - Ubuntu
+- name: install jekyll build dependencies - Ubuntu
   apt: update_cache=yes pkg={{ item }} state=present
   with_items:
     - build-essential

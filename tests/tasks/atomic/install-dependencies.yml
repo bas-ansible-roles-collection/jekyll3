@@ -1,0 +1,28 @@
+---
+# Tests if system dependencies for installing dependencies of Jekyll 3 installed correctly
+
+- name: determine if jekyll build dependencies are installed - CentOS
+  command: rpm -qa
+  changed_when: False
+  when: ansible_distribution == "CentOS"
+  register: jekyll3_test_fact_jekyll_build_dependencies_are_installed_centos
+- name: assert jekyll build dependencies are installed - CentOS
+  assert:
+    that:
+      - "'gcc' in jekyll3_test_fact_jekyll_build_dependencies_are_installed_centos.stdout"
+      - "'gcc-c++' in jekyll3_test_fact_jekyll_build_dependencies_are_installed_centos.stdout"
+  when: ansible_distribution == "CentOS"
+
+- name: determine if jekyll build dependencies are installed - Ubuntu
+  command: dpkg -s {{ item }}
+  with_items:
+    - build-essential
+  changed_when: False
+  when: ansible_distribution == "Ubuntu"
+  register: jekyll3_test_fact_jekyll_build_dependencies_are_installed_ubuntu
+- name: assert jekyll build dependencies are installed - Ubuntu
+  assert:
+    that:
+      - "'install ok installed' in item.stdout"
+  with_items: jekyll3_test_fact_jekyll_build_dependencies_are_installed_ubuntu.results
+  when: ansible_distribution == "Ubuntu"

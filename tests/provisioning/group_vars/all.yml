@@ -1,9 +1,0 @@
----
-# These variables override those defined by roles
-
-# Generic
-project_hostname_project: "barc-jekyll3"
-project_repository: "git@github.com:antarctica/ansible-jekyll3.git"
-
-# BARC roles
-barc_role_name: jekyll3

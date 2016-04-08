@@ -1,0 +1,23 @@
+---
+# Tests Jekyll is available and can compile a basic site
+
+- name: determine if jekyll can be used
+  shell: jekyll -v
+  changed_when: False
+  register: jekyll3_test_fact_jekyll_is_installed
+  become: no
+- name: assert jekyll can be used and is correct version
+  assert:
+    that:
+      - "'jekyll 3.' in jekyll3_test_fact_jekyll_is_installed.stdout"
+
+- name: generate a jekyll site
+  command: jekyll new ~/site
+    creates=~/site/_config.yml
+  become: no
+
+- name: compile jekyll site
+  command: jekyll build
+    chdir=~/site
+    creates=~/site/_site/index.html
+  become: no
