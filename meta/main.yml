@@ -16,8 +16,8 @@ galaxy_info:
     versions:
       - trusty
 
-  categories:
-  - development
+  galaxy_tags:
+  - system
 
 dependencies:
-  - { role: 'BARC.ruby2', tags: BARC_ROLE_DEPENDENCY }
+  - { role: "bas-ansible-roles-collection.ruby2" }

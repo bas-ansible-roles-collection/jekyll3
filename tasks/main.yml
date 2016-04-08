@@ -1,12 +1,17 @@
 ---
-# tasks file for jekyll3
+# Installs Jekyll 3 from Ruby Gems
 
 - include: install-dependencies.yml
   tags:
     - BARC_INSTALL
     - BARC_INSTALL_PACKAGES
 
-- include: install.yml
+- include: install-gem.yml
   tags:
     - BARC_INSTALL
-    - BARC_INSTALL_PACKAGES
+    - BARC_INSTALL_LANGUAGE_PACKAGES
+    - BARC_INSTALL_GLOBAL_LANGUAGE_PACKAGES
+
+- include: register-role.yml
+  tags:
+    - BARC_ROLE_REGISTRATION

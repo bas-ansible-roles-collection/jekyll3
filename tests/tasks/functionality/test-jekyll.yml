@@ -1,12 +1,12 @@
 ---
-# Tests if jekyll can actually be used
+# Tests Jekyll is available and can compile a basic site
 
-# The full path is needed here because the PATH of the remote user isn't always set correctly
 - name: determine if jekyll can be used
-  shell: /usr/local/bin/jekyll -v
+  shell: jekyll -v
   changed_when: False
   register: jekyll3_test_fact_jekyll_is_installed
-- name: assert jekyll can be used
+  become: no
+- name: assert jekyll can be used and is correct version
   assert:
     that:
       - "'jekyll 3.' in jekyll3_test_fact_jekyll_is_installed.stdout"

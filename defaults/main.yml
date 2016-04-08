@@ -1,4 +1,9 @@
 ---
 # Default variables - inventory or playbook overrides will be respected
 
+# BARC specific variables
+jekyll3_barc_role_name: jekyll3
+jekyll3_barc_role_version: 0.2.0
+
+# jekyll3 specific variables
 jekyll3_gem_version: "~>3.0"

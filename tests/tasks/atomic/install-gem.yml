@@ -1,5 +1,5 @@
 ---
-# Tests Ruby 2 is installed correctly
+# Tests Jekyll 3 Gem installed correctly
 
 - name: determine if jekyll gem is installed
   command: gem list jekyll -i
